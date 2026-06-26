@@ -79,7 +79,7 @@ export default function App() {
     <div className="flex flex-col h-screen bg-dark-900 font-mono text-white">
 
       {/* ── Header ── */}
-      <header className="flex items-center justify-between px-6 h-14 bg-dark-700 border-b border-dark-500 shrink-0">
+     <header className="flex items-center justify-between px-6 h-14 bg-dark-700 border-b border-dark-500 shrink-0 shadow-lg shadow-black/20">
 
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -108,7 +108,7 @@ export default function App() {
             className={`flex items-center gap-2 px-5 py-2 rounded-md text-xs font-bold tracking-widest border transition-all
               ${loading
                 ? "bg-dark-500 border-dark-400 text-dark-300 cursor-not-allowed"
-                : "bg-dark-600 border-accent text-accent hover:bg-accent hover:text-dark-900 cursor-pointer"
+                : "bg-dark-600 border-accent text-accent hover:bg-accent hover:text-dark-900 hover:shadow-lg hover:shadow-accent/20 cursor-pointer active:scale-95"
               }`}
           >
             {loading ? (
