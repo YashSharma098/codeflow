@@ -3,6 +3,8 @@ import axios from "axios";
 import CodeEditor from "./components/CodeEditor";
 import FlowCanvas from "./components/FlowCanvas";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const DEFAULT_CODE = `#include<bits/stdc++.h>
 using namespace std;
 
@@ -60,7 +62,7 @@ export default function App() {
     }, 1200);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/generate", {
+      const res = await axios.post(`${API_URL}/api/generate`, {
         code,
         language,
       });
