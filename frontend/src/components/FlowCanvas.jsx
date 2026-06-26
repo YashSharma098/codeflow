@@ -4,6 +4,8 @@ import "reactflow/dist/style.css";
 import { computeLayout } from "../utils/layout";
 import { nodeTypes } from "./FlowNodes";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function buildFlowElements(data) {
   const { positions, backEdgeIds } = computeLayout(data.nodes, data.edges);
 
